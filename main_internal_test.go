@@ -29,8 +29,8 @@ func TestGreet_French(t *testing.T) {
 
 func TestGreet_Burmese(t *testing.T) {
 
-	lang := language("myn")
-	want := "Mingalarpar"
+	lang := language("mm")
+	want := "မင်္ဂလာပါ ကမ္ဘာမြေ"
 
 	got := greet(lang)
 
