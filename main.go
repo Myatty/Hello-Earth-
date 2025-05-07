@@ -1,12 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	greet := greet()
-	fmt.Println(greet)
+	greeting := greet("en")
+	fmt.Println(greeting)
 }
 
-func greet() string {
-	return "Hello Earth"
+type language string
+
+func greet(l language) string {
+
+	switch l {
+	case "en":
+		return "Hello Earth"
+	case "fr":
+		return "Bonjour le monde"
+	default:
+		return ""
+	}
 }
