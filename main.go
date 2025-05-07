@@ -9,6 +9,7 @@ func main() {
 	fmt.Println(greeting)
 }
 
+// create a type based on string (type definition)
 type language string
 
 func greet(l language) string {
