@@ -12,6 +12,7 @@ func main() {
 // create a type based on string (type definition)
 type language string
 
+// map definition is -> mapName := make(map[keyType]valueType)
 var phrasebook = map[language]string{
 
 	"lt": "Salve Terra", // latin
@@ -27,6 +28,11 @@ func greet(l language) string {
 
 	greeting, ok := phrasebook[l]
 
+	/*
+		map returns two things
+			- the message associated with the key language l - and a
+			- boolean (ok as per convention)
+	*/
 	if !ok {
 		return fmt.Sprintf("Unsupported Language: %q", l)
 	}
