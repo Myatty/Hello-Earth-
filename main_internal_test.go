@@ -37,6 +37,10 @@ func TestGreet(t *testing.T) {
 		},
 	}
 
+	/*
+		name is the key (e.g. "English", "French").
+		tc is the value (a testCase struct with lang and want
+	*/
 	for name, tc := range tests {
 
 		t.Run(name, func(t *testing.T) {
