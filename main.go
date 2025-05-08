@@ -1,11 +1,19 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 )
 
 func main() {
-	greeting := greet("el")
+
+	var lang string
+
+	// Parse the command-line flags and set the value of lang
+	flag.StringVar(&lang, "lang", "en", "The required language, e.g. en, ur.")
+	flag.Parse()
+
+	greeting := greet(language(lang))
 	fmt.Println(greeting)
 }
 
